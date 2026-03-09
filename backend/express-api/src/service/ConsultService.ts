@@ -10,7 +10,7 @@ export class ConsultService {
 
     async consult(symptoms: string, userId: string): Promise<IConsult | null> {
         try {
-            const response = await fetch("https://wellnest-quart-api.onrender.com/predict", {
+            const response = await fetch(`${process.env.FAST_API_URL}/predict`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

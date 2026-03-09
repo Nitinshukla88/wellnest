@@ -1,7 +1,7 @@
 from quart import Blueprint, request
 from quart_api.service.predict_service import predict_disease
 
-predict_bp = Blueprint('predict', __name__, url_prefix='/predict')
+predict_bp = Blueprint('predict', __name__, url_prefix='/api/predict')
 
 @predict_bp.post('/')
 async def predict():
